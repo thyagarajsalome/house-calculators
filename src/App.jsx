@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Icons from "./components/Icons";
 import HouseCalculator from "./components/HouseCalculator";
 import TileCalculator from "./components/TileCalculator";
+import PaintCalculator from "./components/PaintCalculator";
 
 const App = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -93,6 +94,7 @@ const App = () => {
       </main>
       <HouseCalculator />
       <TileCalculator />
+      <PaintCalculator />
 
       <footer className="bg-gray-800 p-4 mt-8">
         <div className="container mx-auto text-center text-gray-400">
