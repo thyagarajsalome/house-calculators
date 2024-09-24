@@ -1,10 +1,6 @@
 import React, { useState } from "react";
-
-const IconPlaceholder = ({ className }) => (
-  <div className={`w-12 h-12 ${className} flex items-center justify-center`}>
-    <span className="text-2xl">🔧</span>
-  </div>
-);
+import Icons from "./components/Icons";
+import HouseCalculator from "./components/HouseCalculator";
 
 const App = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,14 +11,14 @@ const App = () => {
 
   const categories = [
     { name: "House", color: "text-green-500", link: "#house-page" },
-    { name: "Floor & Wall tile", color: "text-blue-500", link: "#Tile-page" },
-    { name: "Paint", color: "text-yellow-500", link: "./paint.html" },
-    { name: "Plumbing", color: "text-cyan-500", link: "./plumbing.html" },
-    { name: "Electrical", color: "text-orange-500", link: "./electrical.html" },
+    { name: "Floor & Wall tile", color: "text-blue-500", link: "#tile-page" },
+    { name: "Paint", color: "text-yellow-500", link: "#paint" },
+    { name: "Plumbing", color: "text-cyan-500", link: "#plumbing" },
+    { name: "Electrical", color: "text-orange-500", link: "#electrical" },
     {
       name: "Doors & Windows",
-      color: "text-brown-500",
-      link: "./door_window.html",
+      color: "text-purple-500",
+      link: "#doors-windows",
     },
   ];
 
@@ -35,6 +31,7 @@ const App = () => {
             <button
               onClick={toggleMenu}
               className="text-white text-2xl focus:outline-none"
+              aria-label="Toggle menu"
             >
               ☰
             </button>
@@ -64,7 +61,7 @@ const App = () => {
 
       <main className="container mx-auto p-4">
         <section id="about" className="mb-8">
-          <h3 className="text-2xl font-bold mb-4">About</h3>
+          <h2 className="text-2xl font-bold mb-4">About</h2>
           <p className="text-gray-300">
             Tool Websites Hub is dedicated to providing accurate and helpful
             tools for house construction planning and budget estimation in
@@ -75,7 +72,7 @@ const App = () => {
         </section>
 
         <section id="tools" className="mb-8">
-          <h3 className="text-2xl font-bold mb-4">Tools</h3>
+          <h2 className="text-2xl font-bold mb-4">Tools</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
             {categories.map((category) => (
               <a
@@ -83,20 +80,21 @@ const App = () => {
                 href={category.link}
                 className="flex flex-col items-center p-4 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors"
               >
-                <IconPlaceholder className={category.color} />
+                <Icons name={category.name} color={category.color} />
                 <p className="mt-2 text-center">{category.name}</p>
               </a>
             ))}
           </div>
           <p className="mt-4 text-center text-gray-400">
-            We're continuously adding new tools to our platform.
+            We are continuously adding new tools to our platform.
           </p>
         </section>
       </main>
+      <HouseCalculator />
 
       <footer className="bg-gray-800 p-4 mt-8">
         <div className="container mx-auto text-center text-gray-400">
-          &copy; 2024 Tool Website. All rights reserved.
+          &copy; {new Date().getFullYear()} Tool Website. All rights reserved.
         </div>
       </footer>
     </div>
