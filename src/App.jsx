@@ -3,6 +3,7 @@ import Icons from "./components/Icons";
 import HouseCalculator from "./components/HouseCalculator";
 import TileCalculator from "./components/TileCalculator";
 import PaintCalculator from "./components/PaintCalculator";
+import PlumbingCalculator from "./components/PlumbingCalculator";
 
 const App = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -25,7 +26,7 @@ const App = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white">
+    <div className="min-auto-screen bg-gray-900 text-white">
       <header className="bg-gray-800 p-4 relative">
         <nav className="container mx-auto flex justify-between items-center">
           <div className="text-xl font-bold">Tool Website</div>
@@ -95,6 +96,7 @@ const App = () => {
       <HouseCalculator />
       <TileCalculator />
       <PaintCalculator />
+      <PlumbingCalculator />
 
       <footer className="bg-gray-800 p-4 mt-8">
         <div className="container mx-auto text-center text-gray-400">

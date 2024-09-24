@@ -88,7 +88,7 @@ const PaintCalculator = () => {
   const totalCost = paints.reduce((sum, paint) => sum + paint.cost, 0);
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white p-4">
+    <div className="min-auto-screen bg-gray-900 text-white p-4">
       <div className="max-w-4xl mx-auto space-y-8">
         <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
           <h1 className="text-2xl font-bold text-center mb-6">
