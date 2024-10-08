@@ -121,7 +121,7 @@ const HouseCalculator = () => {
   };
 
   return (
-    <div className="container mx-auto p-6 bg-gray-900 text-white shadow-md rounded-lg">
+    <div className="container  mx-auto p-6 bg-gray-800 text-white shadow-md rounded-lg mb-20">
       <h3 className="text-2xl font-bold mb-4">
         House Construction Estimation Calculator
       </h3>

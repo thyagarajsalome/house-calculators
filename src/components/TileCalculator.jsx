@@ -148,7 +148,7 @@ Thank you for choosing our services!
   };
 
   return (
-    <div className="min-auto-screen bg-gray-900 text-white p-4">
+    <div className="min-auto-screen mx-6 bg-gray-800 text-white p-4 mb-20">
       <h3 className="text-2xl font-bold mb-6">
         Floor and Wall Tile Calculator
       </h3>
