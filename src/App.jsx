@@ -62,8 +62,8 @@ const App = () => {
         </nav>
       </header>
 
-      <main className="container mx-auto p-4">
-        <section id="about" className="mb-8">
+      <main className="container mt-5 mx-auto p-4">
+        <section id="about" className="mb-20">
           <h2 className="text-2xl font-bold mb-4">About</h2>
           <p className="text-gray-300">
             Tool Websites Hub is dedicated to providing accurate and helpful
@@ -74,7 +74,7 @@ const App = () => {
           </p>
         </section>
 
-        <section id="tools" className="mb-8">
+        <section id="tools" className="mb-20">
           <h2 className="text-2xl font-bold mb-4">Tools</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
             {categories.map((category) => (
